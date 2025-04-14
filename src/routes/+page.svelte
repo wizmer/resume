@@ -250,12 +250,18 @@
 							stroke-linecap="round"
 							stroke-linejoin="round"
 							stroke-width="2"
-							d="M3 21h18M5 21V7l8-4v18m6 0V11l-6-4"
+							d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
 						/>
 					</svg>
 					<h3 class="text-lg font-medium">Sustainable Mobility</h3>
 				</div>
 				<p class="text-gray-600">Enthusiast advocating for eco-friendly transportation solutions</p>
+				<a
+					href="https://envilleavelo.fr/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-blue-600 hover:underline">En Ville à Vélo</a
+				>
 			</div>
 
 			<div
@@ -267,12 +273,17 @@
 							stroke-linecap="round"
 							stroke-linejoin="round"
 							stroke-width="2"
-							d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+							d="M5 3v16M5 19h14l-7-14-2 4-5 10zm14 0V8"
 						/>
 					</svg>
 					<h3 class="text-lg font-medium">Rock Climbing</h3>
 				</div>
-				<p class="text-gray-600">Passionate about climbing and outdoor adventures</p>
+				<p class="text-gray-600">for the last 20 years</p>
+				<ul class="ml-6 list-disc text-gray-600">
+					<li>Lead climbing</li>
+					<li>Multi-pitch climbing</li>
+					<li>Bouldering</li>
+				</ul>
 			</div>
 		</div>
 	</section>
