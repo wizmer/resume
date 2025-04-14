@@ -170,7 +170,7 @@
 
 		<!-- Image -->
 		<img
-			src="${base}/images/climbing.jpeg"
+			src={`${base}/images/climbing.jpeg`}
 			alt="Climbing background"
 			class="h-[400px] w-full object-cover"
 		/>
