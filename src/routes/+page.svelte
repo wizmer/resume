@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const experiences = [
 		{
 			company: 'Peachtree Infrastructure',
@@ -168,7 +170,7 @@
 
 		<!-- Image -->
 		<img
-			src="/images/climbing.jpeg"
+			src="${base}/images/climbing.jpeg"
 			alt="Climbing background"
 			class="h-[400px] w-full object-cover"
 		/>
