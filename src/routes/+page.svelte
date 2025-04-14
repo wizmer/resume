@@ -162,7 +162,7 @@
 </script>
 
 <main class="mx-auto min-h-screen max-w-4xl bg-gradient-to-b from-gray-50 to-white p-4">
-	<header class="mb-16 transform text-center transition-all duration-500 hover:scale-105">
+	<header class="mb-16 text-center">
 		<h1
 			class="mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-5xl font-bold text-transparent"
 		>
