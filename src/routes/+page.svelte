@@ -1,6 +1,33 @@
 <script lang="ts">
 	const experiences = [
 		{
+			company: 'Peachtree Infrastructure',
+			role: 'Technical Lead',
+			period: '2022 - Present',
+			location: 'Remote',
+			description: [
+				'Led development of an IoT platform managing temperature control across large building fleets',
+				'Designed and implemented real-time thermostat monitoring and control system',
+				'Built scalable architecture to handle thousands of connected devices',
+				'Optimized energy consumption through smart temperature management algorithms'
+			],
+			technologies: [
+				'Python',
+				'Svelte',
+				'TypeScript',
+				'Google Cloud Platform',
+				'BigQuery',
+				'Cloud SQL',
+				'Cloud Tasks',
+				'Cloud Scheduler',
+				'Firebase',
+				'Sequelize',
+				'PostgreSQL',
+				'Vitest',
+				'Playwright'
+			]
+		},
+		{
 			company: 'PepsiCo Global',
 			role: 'Python Engineer for a Data Science Team',
 			period: '2021 - 2022',
@@ -132,95 +159,62 @@
 	];
 </script>
 
-<section class="experiences">
-	<h2>Professional Experience</h2>
-	{#each experiences as experience}
-		<article class="experience">
-			<header>
-				<div class="title-container">
-					<h3>{experience.role}</h3>
-					<div class="company">{experience.company}</div>
-				</div>
-				<div class="meta">
-					<span class="period">{experience.period}</span>
-					<span class="location">{experience.location}</span>
-				</div>
-			</header>
-			<ul class="description">
-				{#each experience.description as item}
-					<li>{item}</li>
-				{/each}
-			</ul>
-			<footer class="technologies">
-				{#each experience.technologies as tech}
-					<span class="tech-tag">{tech}</span>
-				{/each}
-			</footer>
-		</article>
-	{/each}
-</section>
+<main class="mx-auto max-w-4xl p-4">
+	<header class="mb-16 text-center">
+		<h1 class="mb-4 text-5xl font-bold text-gray-900">Benoit Coste</h1>
+		<h2 class="mb-4 text-2xl font-medium text-gray-700">Senior Software Engineer</h2>
+		<div class="flex items-center justify-center gap-2 text-gray-600">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-5 w-5"
+				viewBox="0 0 20 20"
+				fill="currentColor"
+			>
+				<path
+					fill-rule="evenodd"
+					d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+			<span>74100 Ambilly, FRANCE</span>
+		</div>
+	</header>
 
-<style>
-	.experiences {
-		max-width: 900px;
-		margin: 0 auto;
-		padding: 1rem;
-	}
+	<section class="mb-12">
+		<h2 class="mb-6 text-2xl font-bold">Professional Experience</h2>
+		{#each experiences as experience}
+			<article class="mb-8 border-b border-gray-200 pb-8 last:border-0">
+				<header class="mb-4 flex items-start justify-between">
+					<div>
+						<h3 class="m-0 text-xl font-medium text-gray-800">{experience.role}</h3>
+						<div class="font-medium text-gray-600">{experience.company}</div>
+					</div>
+					<div class="text-right text-gray-600">
+						<span class="block">{experience.period}</span>
+						<span class="block">{experience.location}</span>
+					</div>
+				</header>
+				<ul class="my-4 ml-6 list-disc">
+					{#each experience.description as item}
+						<li class="mb-2 text-gray-700">{item}</li>
+					{/each}
+				</ul>
+				<footer class="mt-4 flex flex-wrap gap-2">
+					{#each experience.technologies as tech}
+						<span class="tech">
+							{tech}
+						</span>
+					{/each}
+				</footer>
+			</article>
+		{/each}
+	</section>
+</main>
 
-	.experience {
-		margin-bottom: 2rem;
-		padding-bottom: 2rem;
-		border-bottom: 1px solid #eee;
-	}
+<style lang="postcss">
+	@reference "tailwindcss";
 
-	.experience header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		margin-bottom: 1rem;
-	}
-
-	.title-container h3 {
-		margin: 0;
-		color: #2c3e50;
-	}
-
-	.company {
-		color: #666;
-		font-weight: 500;
-	}
-
-	.meta {
-		text-align: right;
-		color: #666;
-	}
-
-	.period,
-	.location {
-		display: block;
-	}
-
-	.description {
-		margin: 1rem 0;
-		padding-left: 1.5rem;
-	}
-
-	.description li {
-		margin-bottom: 0.5rem;
-	}
-
-	.technologies {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin-top: 1rem;
-	}
-
-	.tech-tag {
-		background: #f0f0f0;
-		padding: 0.25rem 0.75rem;
-		border-radius: 15px;
-		font-size: 0.875rem;
-		color: #666;
+	.tech {
+		@apply rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600 hover:bg-gray-200;
 	}
 </style>
